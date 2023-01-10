@@ -1,0 +1,845 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  background-color: #19191e;
+  font-family: Inter;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.first-section {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 24px 0px 24px;
+  width: 650px;
+  height: 100%;
+  margin-left: 50px;
+}
+
+.first-section h1 {
+  font-size: 50px;
+  margin-top: 45px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.25;
+  padding-top: 24px;
+}
+
+.first-section h3 {
+  font-size: 33px;
+  margin-top: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.first-section p {
+  width: 75%;
+  font-size: 14px;
+  margin-top: 40px;
+  padding-right: 50px;
+  margin-right: auto;
+  text-align: justify;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: rgb(148 148 149);
+}
+
+.second-section {
+  flex: 0 0 50%;
+}
+
+.socials {
+  padding-top: 15px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 5%;
+  vertical-align: -15px;
+}
+.cright {
+  margin-bottom: 0px;
+}
+
+.cright div {
+  width: 100%;
+  font-size: 12px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+  opacity: 0.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.socials a h4 {
+  display: inline-block;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  letter-spacing: 1.4px;
+  vertical-align: text-top;
+  vertical-align: 0.23em;
+}
+
+.git-link,
+.linkedin-link,
+.mail-link {
+  display: inline-block;
+  margin-right: 5%;
+}
+
+.projects-link,
+.skills-link {
+  margin-top: 60px;
+  color: rgb(148 148 149);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.line {
+  display: inline-block;
+  height: 1px;
+  width: 35px;
+  border: 0;
+  border-top: 2px solid;
+  vertical-align: middle;
+  color: rgb(148 148 149);
+  transition: 0.4s ease;
+}
+
+.crt,
+.line {
+  margin-right: 10px;
+}
+
+.crt {
+  transition: all 0.4s ease;
+}
+
+.skills-a,
+.projects-a {
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+/* PROJECTS-LINK ANIMATION AND SKILL-LINK ANIMATION*/
+.projects-link:hover .line,
+.skills-link:hover .line {
+  transform-origin: 0%;
+  transform: scale(2);
+  color: white;
+}
+
+.projects-link:hover .projects-a,
+.skills-link:hover .skills-a {
+  transform: translateX(38px);
+  color: white;
+}
+
+.projects-link:hover .crt,
+.skills-link:hover .crt {
+  color: white;
+}
+
+/* SOCIALS ANIMATION */
+
+.git-link::after {
+  content: "";
+  display: block;
+  border-bottom: solid 1px white;
+  opacity: 0.1;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.git-link:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.linkedin-link::after {
+  content: "";
+  display: block;
+  border-bottom: solid 1px white;
+  opacity: 0.1;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.linkedin-link:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.mail-link::after {
+  content: "";
+  display: block;
+  border-bottom: solid 1px white;
+  opacity: 0.1;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.mail-link:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* TYPEWRITER ANIMATION */
+
+@keyframes typing {
+  0.0000%,
+  27.3488% {
+    content: "";
+  }
+  1.1395%,
+  26.2093% {
+    content: "l";
+  }
+  2.2791%,
+  25.0698% {
+    content: "le";
+  }
+  3.4186%,
+  23.9302% {
+    content: "lea";
+  }
+  4.5581%,
+  22.7907% {
+    content: "lear";
+  }
+  5.6977%,
+  21.6512% {
+    content: "learn";
+  }
+  6.8372%,
+  20.5116% {
+    content: "learni";
+  }
+  7.9767%,
+  19.3721% {
+    content: "learnin";
+  }
+  9.1163%,
+  18.2326% {
+    content: "learning";
+  }
+
+  30.7674%,
+  51.2791% {
+    content: "";
+  }
+  31.9070%,
+  50.1395% {
+    content: "t";
+  }
+  33.0465%,
+  49.0000% {
+    content: "th";
+  }
+  34.1860%,
+  47.8605% {
+    content: "the";
+  }
+  35.3256%,
+  46.7209% {
+    content: "the ";
+  }
+  36.4651%,
+  45.5814% {
+    content: "the w";
+  }
+  37.6047%,
+  44.4419% {
+    content: "the we";
+  }
+  38.3013%,
+  43.3123% {
+    content: "the web";
+  }
+  54.6977%,
+  75.2093% {
+    content: "";
+  }
+  55.8372%,
+  74.0698% {
+    content: "r";
+  }
+  56.9767%,
+  72.9302% {
+    content: "re";
+  }
+  58.1163%,
+  71.7907% {
+    content: "rea";
+  }
+  59.2558%,
+  70.6512% {
+    content: "read";
+  }
+  60.3953%,
+  69.5116% {
+    content: "readi";
+  }
+  61.5349%,
+  68.3721% {
+    content: "readin";
+  }
+  62.3213%,
+  67.2341% {
+    content: "reading";
+  }
+  78.6279%,
+  96.8605% {
+    content: "";
+  }
+  79.7674%,
+  95.7209% {
+    content: "c";
+  }
+  80.9070%,
+  94.5814% {
+    content: "co";
+  }
+  82.0465%,
+  93.4419% {
+    content: "cof";
+  }
+  83.1860%,
+  92.3023% {
+    content: "coff";
+  }
+  84.3256%,
+  91.1628% {
+    content: "coffe";
+  }
+  85.1111%,
+  90.1231% {
+    content: "coffee";
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewritter {
+  --caret: white;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid white;
+  animation: blink 0.5s linear infinite;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+}
+
+/* --------------------------------------------------------*/
+.second-section {
+  overflow-y: visible;
+  padding: 24px 24px 0px 24px;
+}
+
+.second-section .ss-first {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.second-section .ss-second {
+  height: 100vh;
+}
+
+/* PROJECT SECTION STYLING */
+/* FIRST-PROJECT */
+.ss-first {
+  margin-top: 45px;
+}
+
+.first-project {
+  width: 80%;
+  padding: 60px;
+  border: 0px solid white;
+  display: block;
+  cursor: pointer;
+  background-color: rgb(32 32 34);
+}
+
+.first-project .project-paragraph {
+  color: white;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.first-project .project-title {
+  color: white;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.first-project .project-description {
+  color: rgb(148 148 149);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.calculator-pic {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+/* SECOND-PROJECT */
+.second-project {
+  width: 80%;
+  padding: 60px;
+  border: 0px solid white;
+  display: block;
+  cursor: pointer;
+  background-color: rgb(32 32 34);
+  margin-top: 24px;
+}
+
+.second-project .project-paragraph {
+  color: white;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.second-project .project-title {
+  color: white;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.second-project .project-description {
+  color: rgb(148 148 149);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.trolley-pic {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+/* ANIMATING PROJECTS */
+.first-project,
+.second-project {
+  transition: transform 0.3s;
+}
+
+.first-project:hover,
+.second-project:hover {
+  transform: scale(1.07);
+}
+
+.ss-first:hover > .first-project:not(:hover) {
+  filter: blur(0.5px);
+}
+
+.ss-first:hover > .second-project:not(:hover) {
+  filter: blur(0.5px);
+}
+
+/* SECOND SECTION SECOND PAGE */
+.ss-second {
+  padding: 50px 50px 0px 50px;
+}
+
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  height: 100vh;
+}
+
+.card-1,
+.card-2 {
+  color: rgb(148 148 149);
+  text-align: center;
+}
+
+.front-end-pic,
+.framework-pic {
+  background-color: white;
+  width: 90px;
+  height: 90px;
+  display: block;
+  fill: #fff;
+  background-color: rgb(32 32 34);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.card-1 {
+  background-color: rgb(32 32 34);
+  position: relative;
+  align-self: start;
+  margin-top: 40px;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.card-2 {
+  background-color: rgb(32 32 34);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.skills-paragraph {
+  color: white;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.skills-description {
+  color: rgb(148 148 149);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.skills-description-pic {
+  margin-right: 15px;
+  margin-top: 15px;
+  /* padding: 5px; */
+  height: 35px;
+  width: 35px;
+}
+
+.card-1,
+.card-2 {
+  transition: transform 0.3s;
+}
+
+.card-1:hover,
+.card-2:hover {
+  transform: scale(1.1);
+}
+
+.ss-second:hover > .basic-grid .card-2:not(:hover) {
+  filter: blur(0.5px);
+}
+
+.ss-second:hover > .basic-grid .card-1:not(:hover) {
+  filter: blur(0.5px);
+}
+
+/* SCROLL ANIMATION */
+.hidden {
+  opacity: 0;
+  filter: blur(5x);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .first-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 100vh;
+  }
+  .first-section h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .first-section h3 {
+    font-size: 20px;
+  }
+  .first-section p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  .projects-link,
+  .skills-link {
+    margin-top: 30px;
+    color: rgb(148 148 149);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    align-self: flex-start;
+    margin-left: 50px;
+  }
+  .socials {
+    padding-top: 15px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+  }
+  .profile-pic {
+    display: none;
+    /* opacity: 0; */
+  }
+  /* SOCIALS ALIGNING AND REMOVING LINE ON HOVER------------------------------------------------- */
+  /* ------------------------------------------------------------ */
+  .second-section {
+    display: flex;
+    flex: 20;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .second-section {
+    overflow: visible;
+    padding: 0;
+    margin-top: 100px;
+  }
+  .second-section .ss-first {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+  }
+  .second-section .ss-second {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+  }
+  .ss-first .first-project {
+    padding: 45px;
+  }
+  .ss-first .second-project {
+    padding: 45px;
+  }
+  .ss-second .card-1 {
+    padding: 45px;
+    margin-bottom: -20px;
+  }
+  .first-project,
+  .second-project {
+    transition: transform 0.3s;
+  }
+  .first-project:hover,
+  .second-project:hover {
+    transform: scale(1.07);
+  }
+
+  .ss-first:hover > .first-project:not(:hover) {
+    filter: blur(0px);
+  }
+  .ss-first:hover > .second-project:not(:hover) {
+    filter: blur(0px);
+  }
+  .card-1,
+  .card-2 {
+    transition: transform 0.3s;
+  }
+  .card-1:hover,
+  .card-2:hover {
+    transform: scale(1.1);
+  }
+  .ss-second:hover > .basic-grid .card-2:not(:hover) {
+    filter: blur(0px);
+  }
+  .ss-second:hover > .basic-grid .card-1:not(:hover) {
+    filter: blur(0px);
+  }
+}
+
+@media (max-width: 1175px) {
+  .main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .first-section {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .first-section h1 {
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  .first-section h3 {
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .first-section p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+  .projects-link,
+  .skills-link {
+    margin-top: 30px;
+    color: rgb(148 148 149);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  .second-section {
+    display: flex;
+    flex: 20;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .second-section {
+    overflow: visible;
+    margin-top: 100px;
+  }
+  .second-section .ss-first {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+  }
+  .first-project,
+  .second-project {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .second-section .ss-second {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+  }
+  .ss-first .first-project {
+    padding: 45px;
+  }
+  .ss-first .second-project {
+    padding: 45px;
+  }
+  .ss-second .card-1 {
+    padding: 45px;
+    margin-bottom: -20px;
+  }
+  .first-project,
+  .second-project {
+    transition: transform 0.3s;
+  }
+  .first-project:hover,
+  .second-project:hover {
+    transform: scale(1.07);
+  }
+
+  .ss-first:hover > .first-project:not(:hover) {
+    filter: blur(0px);
+  }
+  .ss-first:hover > .second-project:not(:hover) {
+    filter: blur(0px);
+  }
+  .card-1,
+  .card-2 {
+    transition: transform 0.3s;
+  }
+  .card-1:hover,
+  .card-2:hover {
+    transform: scale(1.1);
+  }
+  .ss-second:hover > .basic-grid .card-2:not(:hover) {
+    filter: blur(0px);
+  }
+  .ss-second:hover > .basic-grid .card-1:not(:hover) {
+    filter: blur(0px);
+  }
+}
